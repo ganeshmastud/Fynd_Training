@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="My portfolio">
+    <title>Portfolio</title>
+    <style>
+        .menu{
+            list-style-type : none;
+            padding : 0;
+            margin :0;
+            
+        }
+        .menu li{
+            display:inline;
+            padding-left: 4px;
+        }
+
+         .table-bordered {
+                border-collapse: collapse;
+            }
+
+            .table-bordered,
+            .table-bordered th,
+            .table-bordered td {
+                border: 1px solid black;
+            }
+
+            .table-bordered td,
+            .table-bordered th {
+                padding: 10px;
+            }
+             
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="E:\Fynd_fsd\Consulting_pvt_ltd.html">Home</a></li>
+            <li><a href="E:\Fynd_fsd\Portfolio.html">Portfolio</a></li>
+            <li><a href="E:\Fynd_fsd\Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Portfolio</h1>
+    </header>
+    <hr>
+    <main>
+        
+        <article>
+            <section class = "proj-1">
+                <h2>
+                    Project 1
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa numquam possimus sequi aspernatur illum illo laboriosam veniam aliquam quis nam! Aut eos ipsa sunt voluptas, ipsam molestiae iure facilis incidunt?
+                </p>
+            </section>
+            <section class = "proj-2">
+                <h2>
+                    Project 2
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa numquam possimus sequi aspernatur illum illo
+                    laboriosam veniam aliquam quis nam! Aut eos ipsa sunt voluptas, ipsam molestiae iure facilis incidunt?
+                </p>
+            </section>
+        </article>
+        <h2>Plans</h2>
+        <table class="table-bordered">
+            <thead>
+                <tr>
+                    <!-- table heading cell -->
+                    <th rowspan = "2" scope="col">plan</th>
+                    <th rowspan = "2" scope="col">Max cluster size</th>
+                    <th rowspan = "2" scope="col">Cloud provider</th>
+                    <th colspan = "2" scope="col">Price in USD(per code)</th>
+                </tr>
+                <tr>
+                    <th scope="rowgroup">Billed per hour</th>
+                    <th scope="rowgroup">Billed per month</th>
+                </tr>
+                        
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="3" scope="row">Free Tier</th>
+                    <td>3</td>
+                    <td>GCP</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+               
+                <tr>
+                    <td>3</td>
+                    <td>AWS</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>  
+                <tr>
+                    <td>3</td>
+                    <td>Azure</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+
+                <tr>
+                    <th rowspan="3" scope="row">Basic</th>
+                    <td>15</td>
+                    <td>AWS</td>
+                    <td>0.10</td>
+                    <td>0.05</td>
+                </tr>
+                
+                <tr>
+                    <td>10</td>
+                    <td>Azure</td>
+                    <td>0.15</td>
+                    <td>0.08</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>GCP</td>
+                    <td>0.20</td>
+                    <td>0.10</td>
+                </tr>
+
+                <tr>
+                    <th rowspan="3" scope="row">Pro</th>
+                    <td>200</td>
+                    <td>AWS</td>
+                    <td>0.07</td>
+                    <td>0.03</td>
+                </tr>
+                
+                <tr>
+                    <td>100</td>
+                    <td>Azure</td>
+                    <td>0.10</td>
+                    <td>0.05</td>
+                </tr>
+                <tr>
+                    <td>100</td>
+                    <td>GCP</td>
+                    <td>0.12</td>
+                    <td>0.06</td>
+                </tr>
+
+                    
+            </tbody>
+        </table>
+        <span class ="table-name"><strong> Hosting plans and Pricing for various Cloud Providers</strong></span>
+    </main>
+    <hr>
+    <footer>
+        <span class="footer">
+            <a href="www.digdeeper.in">www.digdeeper.in</a>
+        </span>
+        <span class="footer">&copy; Consultant</span>
+        <span class="footer">puranik@digdeeper.in</span>
+    </footer>
+</body>
+</html>

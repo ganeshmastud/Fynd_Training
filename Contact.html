@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact">
+    <title>Contact</title>
+    <style>
+        .menu{
+            list-style-type : none;
+            padding : 0;
+            margin :0;
+            
+        }
+        .menu li{
+            display:inline;
+            padding-left: 4px;
+        }
+        .star{
+            color: red;
+        }
+        fieldset{
+            border: none;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="E:\Fynd_fsd\Consulting_pvt_ltd.html">Home</a></li>
+            <li><a href="E:\Fynd_fsd\Portfolio.html">Portfolio</a></li>
+            <li><a href="E:\Fynd_fsd\Contact.html">Contact</a></li>
+            <li><a href="E:\Fynd_fsd\css_01Assgn.html">css01</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Consulting Pvt. Ltd.</h1>
+    </header>
+    <hr>
+    <main>
+        
+        <article>
+            <section class = "contact_info">
+                <h2>
+                     Contact Us
+                </h2>
+                <label>Phone:</label> 
+                <a href = "tel:">+123-56-478</a><br>
+                <label>Email:</label> 
+                <a href = "email:">Consultant@gmail.com</a>
+            </section>
+            <section class ="drop_msg">
+                <h2>Drop a message</h2>
+                <p>
+                    Please drop us a message by fillingout this form, and we will get back to you within 2 working days.
+                </p><br>
+                <span>Fields marked with <span style="color: red;">*</span> are required</span>
+                <form action="/" method="POST">
+                    <label for="name">Your Name <span class="star">*</span></label><br>
+                    <input type="text" placeholder="John Doe" id="name" name="name" required><br>
+                    <br>
+                    <label for="email">Your Email <span class="star">*</span></label><br>
+                    <input type="text" placeholder="john.doe@example.com" id="email" name="email" required><br>
+                    <br>
+                    <label for="dropdown">What are you looking to build? <span class="star">*</span></label><br>
+                    <select name="drop" id="dropdown" required>
+                        <option value=" " selected>-- Choose one --</option>
+                        <option value="blog">Blog</option>
+                        <option value="online store">Online store</option>
+                        <option value="game">Game</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend>Platform you plan to support <span class="star">*</span></legend>
+                        <label><input type="checkbox" name="platform" value="web" checked>Web</label>
+                        <label><input type="checkbox" name="platform" value="mobile">Mobile</label>
+                        <label><input type="checkbox" name="platform" value="desktop">Desktop</label>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <label for="msg">Message</label><br>
+                    <textarea name="message" id="msg" cols="40" rows="5"></textarea>
+                    <br>
+                    <br>
+                    <input type="reset">
+                    <input type="submit" value="Send message" />
+                </form>
+            </section>
+        </article>
+    </main>
+    <hr>
+    <footer>
+        
+        <span class="footer">&copy; Consultant.com</span>
+        
+    </footer>
+</body>
+</html>

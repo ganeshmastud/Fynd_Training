@@ -1,0 +1,12 @@
+.primary {
+  background-color: navy;
+  color: white;
+}
+.secondary {
+  background-color: olive;
+  color: white;
+}
+.error {
+  background-color: crimson;
+  color: white;
+}
