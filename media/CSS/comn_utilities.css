@@ -1,0 +1,25 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+header {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+footer {
+  width: 90%;
+  margin: 0 auto;
+}
+hr {
+  /* display: inline-block; */
+  width: 90%;
+  /* margin: 0 auto; */
+  align: center;
+}
+main {
+  width: 90%;
+  margin: 0 auto;
+  /* text-align: left; */
+}
