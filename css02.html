@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*:first-child*/
+        :nth-child(1) {
+            border: 1px solid black;
+        }
+
+        div:nth-child(1) {
+            /* nothing is selected on this page */
+            background-color: yellow;
+        }
+
+        div> :nth-child(1) {
+            background-color: olive;
+        }
+
+        section :nth-child(1) {
+            font-size: 1.5em;
+        }
+
+        section:nth-child(1) {
+            font-style: italic;
+        }
+
+        :nth-of-type(2) {
+            /* any element which is the second of its type among itds siblings */
+            text-decoration: underline;
+        }
+
+        div:nth-of-type(2) {
+            /* select an element which is the second div among its siblings */
+            background-color: pink;
+        }
+        section :nth-of-type(2){
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint reiciendis laudantium asperiores repudiandae
+            temporibus nulla porro totam, eos fuga, hic quia fugiat blanditiis expedita incidunt similique rerum dolorem
+            voluptatum earum?</p>
+        <div>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, magnam omnis itaque sapiente totam error
+            libero exercitationem doloribus amet praesentium minus ex beatae voluptatem repellendus labore nesciunt ut
+            facilis maiores.
+        </div>
+        <p>Modi vero nisi voluptatum dicta provident repudiandae nostrum, soluta placeat, optio velit odio molestias
+            quae beatae officiis nam. Reprehenderit nostrum voluptatibus minus fugit voluptatum fuga nam numquam.
+            Cupiditate, nostrum repudiandae.</p>
+        <div>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, natus, accusamus sunt tempore atque
+            architecto veniam numquam dolores odit commodi cupiditate inventore dignissimos, quasi doloribus quia
+            doloremque placeat velit animi.
+        </div>
+        <p>Debitis aspernatur animi blanditiis molestias porro, natus et autem sit doloribus. Ullam commodi ab aliquam
+            autem quas officia! Molestias illum nisi aut voluptatibus fuga a impedit non illo nostrum veritatis?</p>
+        <p>Inventore dolorem sunt quidem quasi accusantium consectetur quibusdam, nesciunt omnis non deserunt adipisci,
+            culpa tempore laborum aliquid? Ad ullam animi, consectetur quas qui fugiat in, voluptate explicabo suscipit
+            eveniet quidem.</p>
+        <p>Repudiandae dolorum voluptatem cum earum. Saepe ullam sunt cupiditate deserunt. Voluptatum, omnis illum sunt
+            iure asperiores fugit quis deleniti cum. Earum nostrum voluptas laboriosam porro explicabo cupiditate,
+            quibusdam tempora sint.</p>
+    </section>
+    <section>
+        Section 2 - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eligendi minus velit quibusdam
+        necessitatibus architecto a, quod vel rem nihil. Doloribus veritatis optio a repellendus? Dolor fuga itaque
+        totam veniam.
+    </section>
+    
+</body>
+
+</html>
