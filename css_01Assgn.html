@@ -8,124 +8,19 @@
     <link rel="stylesheet" href=".\media\CSS\01.css">
     <link rel="stylesheet" href=".\media\CSS\navbar.css">
     <link rel="stylesheet" href=".\media\CSS\comn_utilities.css">
-    <style>
-        .panel{
-            
-            border-radius: 5px;
-            margin-bottom: .4em;
-            border: 2px solid;
-        }
-        .panel-primary {
-            
-            
-            border: 2px solid navy;
-        }
-        .panel-primary h2 {
-            margin-top: 0px;
-            
-            background-color: navy;
-            padding: 0.4em;
-            color: white;
-        }
-        /* , h2.panel-secondary, h2.panel-error */
-        /* } background-color: navy; background-color: olive; background-color: crimson; */
-
-        .panel-primary p, .panel-secondary p, .panel-error p {
-            padding-left: .6em;
-        }
-
-        .panel-secondary {
-            
-            
-            border: 2px solid olive;
-        }
-         .panel-secondary h2{
-            margin-top: 0px;
-            
-            background-color: olive;
-            padding: 0.4em;
-            color: white;
-        }
-        /* .panel-secondary p{
-            padding-left: .6em;
-        } */
-        .panel-error {
-            
-            
-            border: 2px solid crimson;
-        }
-        .panel-error h2{
-            margin-top: 0px;
-            
-            background-color: crimson;
-            padding: 0.4em;
-            color: white;
-        }
-        /* .panel-error p{
-            padding-left: .6em;
-        } */
-        .btn{
-            display: inline-block;
-            padding: 0.5em 1em;
-            border-radius: 4px;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .btn-primary {
-                border: 2px solid rgb(41, 10, 126);
-                background-color: rgb(104, 102, 238);
-        }
-        .btn-primary:hover{
-            border: 3px solid rgb(50, 21, 129);
-            background-color: rgb(81, 80, 172);
-            font-style: oblique;
-        }
-        .btn-secondary{
-            border: 2px solid rgb(92, 129, 17);
-            background-color: olive;
-        }
-        .btn-secondary:hover{
-            border: 3px solid rgb(83, 114, 22);
-            background-color: rgb(116, 116, 18);
-            font-style:italic;
-        }
-        .btn-error {
-            border: 2px solid rgb(165, 13, 43);
-            background-color: crimson;
-        }
-        .btn-error:hover{
-            border: 3px solid rgb(124, 19, 40);
-            background-color: rgb(156, 38, 61);
-        }
-        
-        .button {
-            margin-top: 1em;
-            width: 80px;
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-           
-            text-overflow: ellipsis;
-
-            padding: 0.5em 1em;
-            border-radius: 4px;
-            color: white;
-            cursor: pointer;
-            text-decoration: none;
-        }​
-        .link{
-            margin-top: 5px;
-        }
-    </style>
+    
 </head>
 <body>
     <nav>
         <ul class="menu">
-            <li><a href=".\index.html">Home</a></li>
-            <li><a href=".\Portfolio.html">Portfolio</a></li>
-            <li><a href=".\Contact.html">Contact</a></li>
-            <li><a href=".\css_01Assgn.html">css01</a></li>
+            <li><a id="logo" href=".\index.html">
+                    <img src=".\media\images\logo.png" height="20rem" width="20rem" alt="website home logo image">
+                </a>
+            </li>
+            <li><a href=".\index.html" class="active">Home</a></li>
+            <li><a href=".\Portfolio.html" class="active">Portfolio</a></li>
+            <li><a href=".\Contact.html" class="active">Contact</a></li>
+            <li><a class ="current href=".\css_01Assgn.html" class="active">css01</a></li>
         </ul>
     </nav>
     <main style=" padding-top: 8rem">

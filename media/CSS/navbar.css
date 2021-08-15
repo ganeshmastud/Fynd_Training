@@ -24,8 +24,22 @@
 
   color: lightgray;
 }
+#logo {
+  height: 27px;
+  /* border: none; */
+  filter: blur(1px);
+}
+
+#logo:hover {
+  filter: blur(0);
+}
 .menu li a:hover {
   /* padding-bottom: 1.4em; */
+  font-weight: bold;
+  color: white;
+  border-bottom: 5px solid crimson;
+}
+.menu .current {
   font-weight: bold;
   color: white;
   border-bottom: 5px solid crimson;
