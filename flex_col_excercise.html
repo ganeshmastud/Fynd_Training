@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            display: flex;
+             flex-direction: row;
+            /* by default */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* flex-start, flex-end, center */
+            align-items: stretch;
+            /* center, flex-start, flex-end */
+            
+        }
+        .col {
+            /* flex-basis: 25.5%;
+                flex-shrink: 1;
+                flex-grow: 1; */
+            flex: 0 0 23%;
+           
+            margin-bottom: 1em;
+        }
+        .col .h2{
+            font: 20px "Segoe UI", SegoeUI, "Halvetica Neue",Helvetica,Arial,sans-serif";
+        }
+       .col .p, a{
+            font: 15px "Segoe UI", SegoeUI, "Halvetica Neue",Helvetica,Arial,sans-serif";
+        }
+        .col a:link{
+            text-decoration: none;
+        }
+        .col a:hover{
+            text-decoration: underline;
+        }
+        .col a:active{
+            padding:0.5rem;
+            color: #551A8B;
+            background-color: rgb(226, 217, 217);
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div class="row">
+            <div class="col">
+                <img src="E:\Fynd_fsd\media\images\img1.PNG">
+                <h3>OneNote</h3>
+                <p>Organise your notes and your life.</p>
+                <a href="#">Download now ></a>
+            </div>
+            <div class="col">
+                <img src="E:\Fynd_fsd\media\images\img2.PNG">
+                <h3>Microsoft OneDrive</h3>
+                <p>Save your files and photos to OneDrive and access them from any device, anywhere.</p>
+                <a href="#">Learn more > </a>
+            </div>
+            <div class="col">
+                <img src="E:\Fynd_fsd\media\images\img3.PNG">
+                <h3>Microsoft 365</h3>
+                <p>Premium Office apps, extra cloud storage, advanced security, and more – all in one convenient
+                    subscription.</p>
+                <a href="#">Download now ></a>
+            </div>
+            <div class="col">
+                <img src="E:\Fynd_fsd\media\images\img4.PNG">
+                <h3>Xbox Game Pass Ultimate</h3>
+                <p>Get your first month of membership for ₹50. Play on the devices you own. Includes EA Play. Offer
+                    available to new
+                    subscribers only.</p>
+                <a href="#">Join now ></a>
+            </div>
+        </div>
+
+    </main>
+   
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: row;
+            /* by default */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* flex-start, flex-end, center */
+            align-items: stretch;
+            /* center, flex-start, flex-end */
+            border: 2px solid black;
+        }
+
+        .col {
+            /* flex-basis: 25.5%;
+                flex-shrink: 1;
+                flex-grow: 1; */
+            flex: 0 0 30%;
+            background-color: lightgray;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <span>Column 1</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 2</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 3</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+        <div class="col">
+            <span>Column 4</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo esse sit quas delectus blanditiis soluta magnam
+            expedita, corrupti explicabo, suscipit saepe mollitia nesciunt dignissimos laudantium cupiditate fugiat
+            voluptatem, quidem in?
+        </div>
+        <div class="col">
+            <span>Column 5</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolor soluta deserunt, quasi nihil ratione ad,
+            in magnam enim nulla odio ut ex aliquam exercitationem cumque necessitatibus? Suscipit, deserunt ex.
+        </div>
+        <div class="col">
+            <span>Column 6</span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro ut nobis rem quam, voluptate odit nostrum
+            quis maxime ad mollitia facilis doloribus consequatur atque dicta eius nemo aperiam officiis quisquam! Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Perferendis voluptatum molestiae a delectus eos eveniet,
+            nisi beatae possimus atque, temporibus accusamus voluptatibus rerum, eum repellendus ab autem veniam
+            voluptas eius.
+        </div>
+    </div>
+</body>
+
+</html>
