@@ -7,78 +7,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+               box-sizing: border-box;
+        }
+        body{
+            padding: 0px;
+            width: 90%;
+            margin:1em auto;
+            font-family: "Segoe UI", SegoeUI, "Halvetica Neue",Helvetica,Arial,"sans-serif";
+        }
         .row{
+            
+            /* padding-top: 5%; */
+            width: 100%;
             display: flex;
-             flex-direction: row;
             /* by default */
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             /* flex-start, flex-end, center */
-            align-items: stretch;
+            
             /* center, flex-start, flex-end */
             
         }
-        .col {
+        .product {
             /* flex-basis: 25.5%;
                 flex-shrink: 1;
                 flex-grow: 1; */
-            flex: 0 0 23%;
+            flex: 0 0 100%;
            
             margin-bottom: 1em;
         }
-        .col .h2{
-            font: 20px "Segoe UI", SegoeUI, "Halvetica Neue",Helvetica,Arial,sans-serif";
+        .prd-details{
+            width: 100%;
         }
-       .col .p, a{
-            font: 15px "Segoe UI", SegoeUI, "Halvetica Neue",Helvetica,Arial,sans-serif";
-        }
-        .col a:link{
+          
+        .product a{
             text-decoration: none;
+            color: #4083b6;
+           font-weight: 500;
+           flex-wrap:wrap;
         }
-        .col a:hover{
-            text-decoration: underline;
+        .prd-img img {
+            width: 100%;
         }
-        .col a:active{
+        .product a:hover{
+            color: #005da6;
+            /* text-decoration: underline; */
+            border-bottom: 2px solid#005da6;
+        }
+        .product a:active{
             padding:0.5rem;
             color: #551A8B;
             background-color: rgb(226, 217, 217);
-            border: 1px solid black;
+            
+        }
+        @media (min-width: 700px) {
+            .product {
+                flex-basis: 45%;
+            }
+            
+        }
+
+        @media (min-width: 1080px) {
+            .product {
+                flex-basis: 30%;
+            } 
+             
+             
+        }
+        @media(min-width: 1240px) {
+            .product {
+                flex-basis: 22%;
+            }   
         }
     </style>
 
 </head>
 
 <body>
+    <header>
+        <h1>Microsoft products</h1>
+    </header>
     <main>
-        <div class="row">
-            <div class="col">
-                <img src="E:\Fynd_fsd\media\images\img1.PNG">
-                <h3>OneNote</h3>
-                <p>Organise your notes and your life.</p>
-                <a href="#">Download now ></a>
+        <section class="products">
+            <div class="row">
+                <div class="product">
+                    <div class="prd-img">
+                        <img src=".\media\images\img1.PNG" alt="one note">
+                    </div>
+                    <div class="prd-details">
+                        <h3>OneNote</h3>
+                        <p>Organise your notes and your life.</p>
+                        <a href="#">Download now ></a>
+                    </div>
+            
+                </div>
+                <div class="product">
+                    <div class="prd-img">
+                        <img src=".\media\images\img2.PNG" alt = "Microsoft onedrive">
+                    </div>
+            
+                    <div class="prd-details">
+                        <h3>Microsoft OneDrive</h3>
+                        <p>Save your files and photos to OneDrive and access them from any device, anywhere.</p>
+                        <a href="#">Learn more > </a>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="prd-img">
+                        <img src=".\media\images\img3.PNG" alt ="Microsoft 365">
+                    </div>
+                    <div class="prd-details">
+                        <h3>Microsoft 365</h3>
+                        <p>Premium Office apps, extra cloud storage, advanced security, and more – all in one convenient
+                            subscription.</p>
+                        <a href="#">For up to 6 people ></a> &nbsp;
+                        <a href="#">For 1 person ></a>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="prd-img">
+                        <img src=".\media\images\img4.PNG" alt ="Xbox Game Pass Ultimate">
+                    </div>
+                    <div class="prd-details">
+                        <h3>Xbox Game Pass Ultimate</h3>
+                        <p>Get your first month of membership for ₹50. Play on the devices you own. Includes a EA Play. Offer
+                            available to new
+                            subscribers only.</p>
+                        <a href="#">Join now ></a>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <img src="E:\Fynd_fsd\media\images\img2.PNG">
-                <h3>Microsoft OneDrive</h3>
-                <p>Save your files and photos to OneDrive and access them from any device, anywhere.</p>
-                <a href="#">Learn more > </a>
-            </div>
-            <div class="col">
-                <img src="E:\Fynd_fsd\media\images\img3.PNG">
-                <h3>Microsoft 365</h3>
-                <p>Premium Office apps, extra cloud storage, advanced security, and more – all in one convenient
-                    subscription.</p>
-                <a href="#">Download now ></a>
-            </div>
-            <div class="col">
-                <img src="E:\Fynd_fsd\media\images\img4.PNG">
-                <h3>Xbox Game Pass Ultimate</h3>
-                <p>Get your first month of membership for ₹50. Play on the devices you own. Includes EA Play. Offer
-                    available to new
-                    subscribers only.</p>
-                <a href="#">Join now ></a>
-            </div>
-        </div>
+        </section>
+        
 
     </main>
    

@@ -46,7 +46,9 @@ li {
 }
 
 .headline {
-  display: inline-block;
+  clear: both;
+  display: block;
+  text-decoration: center;
   margin: 0% 10%;
   padding-top: 1%;
   color: black;
