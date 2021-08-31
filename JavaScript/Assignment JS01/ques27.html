@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .last_child{
+            border: 1px solid black;
+            padding:1em;
+            font-size: 2em;
+            color:olive;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus fugit at, error ratione sequi sint
+            suscipit qui perspiciatis dolorem reiciendis accusamus adipisci voluptatibus esse tenetur ut odio autem eius
+            sapiente!</p>
+        <p id="p2">Commodi harum et, dolorum sint illum voluptates reprehenderit non, quae magni accusamus adipisci sequi ea
+            nulla dolor delectus. Ducimus ipsum eius, dolorem delectus cumque iure eum fugit qui fuga eligendi.</p>
+        <p id="p3">Molestias quia velit non ipsum quibusdam cupiditate at eaque, perferendis temporibus vitae minus neque
+            sapiente aliquam blanditiis, nostrum fuga magnam quis. Eum harum nemo natus obcaecati libero maxime rem ipsa?</p>
+
+    </div>
+        <script>
+            let newItem = document.createElement("p");       // Create a p node
+            let textnode = document.createTextNode("add as a first p element");  // Create a text node
+            newItem.appendChild(textnode);
+         let container = document.querySelector(".container");
+        //  let new_p = `<p id="p0"> add as first p element</p>`;
+        //  console.log(" node ",container.firstChild);
+        container.insertBefore(newItem, container.childNodes[0]);
+
+             let newItem_p = document.createElement("p");       // Create a <li> node
+             textnode = document.createTextNode("add as a last p element");  // Create a text node
+             newItem_p.appendChild(textnode);
+
+        container.appendChild(newItem_p);
+        let para2 = document.querySelector("#p2");
+        console.log(para2.innerHTML);
+        para2.innerHTML="";
+        para2.innerHTML=` <span> first paragraph2 span </span> <span> second paragraph2 span </span>`;
+        console.log("paragrap2 id",para2.id);
+        para2.id='para2';
+        console.log("paragrap2 id", para2.id);
+        para2.name="second_para";
+        console.log("paragrap2 name", para2.name);
+        let para3 = document.querySelector("#p3");
+        para3.style.backgroundColor="crimson";
+        para3.style.color='white';
+        let last_child = container.lastChild;
+        last_child.className = "last_child";
+        // last_child.classList.add("mystyle");
+        console.log("last p", last_child);
+        console.log("class lastchild", last_child.class);
+        console.log("last p", last_child);
+    </script>
+</body>
+</html>

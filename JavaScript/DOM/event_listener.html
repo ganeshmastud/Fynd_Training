@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listener</title>
+    <style>
+        .heading{
+            display: flex;
+            cursor: pointer;
+            background-color: grey;
+            width: 80%;
+            margin: 1em auto;
+            flex-direction: column;
+            padding: 0;
+            border-radius: 3px;
+
+
+        }
+        .header{
+            background-color: antiquewhite;
+            padding-left: 1em;
+            padding-top: 0;
+        }
+        .content{
+            display: none;
+
+        }
+        #para{
+            padding-left: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h2 class="header">open the window</h2>
+        <div class="content" id="para">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptates sapiente sed expedita iste dignissimos animi voluptatem quibusdam neque quos? Expedita tempora quo tenetur mollitia tempore aut atque animi possimus?</p>
+        </div>
+    </div>
+    <script>
+        let flag=true;
+        let open_window=document.querySelector(".heading");
+        let heading_click= document.querySelector(".header");
+        heading_click.addEventListener('click', function display_content(){
+            if(flag ===true){
+                document.getElementById("para").style.display = "block";
+                flag=false;
+            } else{
+                 document.getElementById("para").style.display = "none";
+                 flag=true;
+            }
+        });
+
+
+        const iphone11={
+            name:'iphone11',
+            manufacturer:'Apple',
+            price:699,
+            specs:{
+                color:'white',
+                memory:{
+                    value:128,
+                    unit:'MB'
+                },
+                cameras:{
+                    front:'12 MP Wide',
+                    rear:'12 MP Ultra Wide'
+                },
+                availableColors:['Black', 'red','white', 'green']
+
+            },
+            CalculateDiscountedPrice: function(percentage){
+                return this.price*(100-percentage)/100;
+            }
+        }
+        const {name, manufacturer, unitmemory, rear, } = iphone11;
+        console.log(name, manufacturer, unit, rear);
+    </script>
+</body>
+
+</html>

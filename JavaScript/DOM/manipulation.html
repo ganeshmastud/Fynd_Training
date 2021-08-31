@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="name" class=".prsn-details"></div>
+
+    <script>
+        const john =[
+        {
+                name: 'John Doe',
+                age: 32,
+                emails: [
+                    'john@example.com',
+                    'john@gmail.com'
+                ],
+                address: {
+                    city: 'Bangalore',
+                    pinCode: 560101
+                }
+            },
+            {
+                name: 'johny depp',
+                age: 39,
+                emails: [
+                    'johny@example.com',
+                    'johny@gmail.com'
+                ],
+                address: {
+                    city: 'NY',
+                    pinCode: 560103
+                }
+            }
+        ] 
+
+        const liEmails = john.emails.map(email => `<li>${email}</li>`);
+        const lis = liEmails.join("");
+        console.log("iEmails ", liEmails);
+
+        const name = document.querySelector('#name');
+
+        // name.innerText = '<span>John Doe</span>';
+        name.innerHTML = `
+                <div class="card">
+                    <h1>${john.name}</h1>
+                    <hr />
+                    <p>
+                        Age: ${john.age}
+                    </p>
+                    <ul>
+                        ${lis}
+                    </ul>
+                </div>
+            `;
+    </script>
+</body>
+
+</html>

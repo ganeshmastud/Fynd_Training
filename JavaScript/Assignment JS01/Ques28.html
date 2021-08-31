@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment Ques30</title>
+    <style>
+        #result {
+            margin: 2em;
+
+            border: 1px solid black;
+            display: block;
+        }
+
+        #submit {
+            margin: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <p class="para">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed eaque ipsum quas recusandae dolore
+                molestiae non necessitatibus ut voluptatum nihil debitis repudiandae placeat rem aperiam itaque hic,
+                accusamus nesciunt consequatur?
+            </p>
+            <form action="#">
+                <input type="text" id="inp" name="input">
+                <button id="submit" name="submit" value ="submit">click</button>
+            </form>
+            <span class="error"></span>
+        </div>
+    </main>
+    <script>
+        let input_val = document.getElementById("inp");
+        let butn_clk = document.getElementById("submit");
+        input_val.addEventListener("input", function check() {
+            if (input_val.value.length > 8) {
+                butn_clk.disabled = true;
+                input_val.style.backgroundColor = 'transparent';
+            } else if (input_val.value.length == 0) {
+                input_val.style.backgroundColor = 'transparent';
+            }
+            else {
+                input_val.style.backgroundColor = 'lightgreen';
+                butn_clk.disabled = false;
+            }
+        })
+        butn_clk.addEventListener("click", function validate() {
+            if (input_val.value.length < 8) {
+                let err = document.querySelector(".error");
+                err.innerText = input_val.value;
+            }
+            let para = document.querySelector(".para");
+            alert(para.innerText);
+        })
+    // document.getElementById("result").innerText="hello";
+    </script>
+</body>
+
+</html>

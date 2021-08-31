@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>Click me to get a new quote</button>
+    <div id="quote"></div>
+
+    <script src=".\getQuoteNext.js"></script>
+    <script>
+      // DOM nodes -> objects the browser creates
+      console.dir(document); // HTML page
+      console.dir(document.documentElement); // root node (html element)
+      console.dir(document.documentElement.children);
+      console.dir(document.documentElement.children[1].children); // elements within body
+
+      const buttonNode = document.documentElement.children[1].children[0];
+      const quoteNode = document.getElementById("quote"); // #quote
+
+      setTimeout(function () {
+        buttonNode.innerText = "Click me (new text generated in JS)";
+      }, 2000);
+
+      const nextQuote = getNextQuote(0);
+      buttonNode.addEventListener("click", function () {
+        const quote = nextQuote();
+        quoteNode.innerText = quote.text;
+      });
+      quoteNode.style.fontSize="2em";
+      quoteNode.style.paddingTop="1em";
+      quoteNode.style.color="red";
+
+    </script>
+  </body>
+</html>

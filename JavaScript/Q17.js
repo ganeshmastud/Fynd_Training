@@ -90,3 +90,24 @@
 // console.log("element present or not at index  ",num.indexOf(23));
 // console.log("element present or not at index  ",num.indexOf(41));
 
+
+// const bday = new Date( 1999, 8 /* Jan - 0, Dec - 11 */, 19 );
+// console.log(bday);
+// console.log( bday.toLocaleString() );
+// bday.setFullYear(2021);
+// console.log( bday.toLocaleString() );
+// console.log( bday.getDay() );
+
+
+
+function nextQuote(x){
+    return  function incr(){
+        return x++;
+    }
+}
+let inc = nextQuote(0);
+console.log("inc ",inc);
+console.log(inc(2));
+console.log(inc());
+console.log(inc());
+console.log(inc());

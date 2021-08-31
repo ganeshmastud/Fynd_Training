@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment Ques30</title>
+    <style>
+        #result {
+            margin: 2em;
+
+            border: 1px solid black;
+            display: block;
+        }
+
+        #submit {
+            margin: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <!--         <form action="#"> -->
+            <input type="text" id="num1" placeholder="enter any number" required>
+            <input type="text" id="num2" placeholder="enter any number" required>
+            <select name="opn" id="opn">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select> <br>
+            <button id="submit"> click</button>
+            <!--         </form> -->
+
+
+            <span id="result"></span>
+        </div>
+    </main>
+    <script>
+        document.getElementById("submit").addEventListener("click", function cal() {
+            let val1 = document.getElementById("num1").value;
+            let val2 = document.getElementById("num2").value;
+            let opn = document.getElementById("opn").value;
+            let res = 0
+            if (opn === "+") {
+                res = parseInt(val1) + parseInt(val2);
+            } else if (opn === "-") {
+                res = parseInt(val1) - parseInt(val2);
+            } else if (opn === "*") {
+                res = parseInt(val1) * parseInt(val2);
+            }
+            else if (opn === "/") {
+                res = parseInt(val1) / parseInt(val2);
+            }
+            document.getElementById("result").innerText = res;
+            console.log(res);
+        })
+    // document.getElementById("result").innerText="hello";
+    </script>
+</body>
+
+</html>

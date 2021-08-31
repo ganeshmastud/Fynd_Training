@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment Ques29</title>
+    <style>
+        .panels{
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgb(226, 222, 222);
+            border-radius: 5px;
+        }
+        .panel{
+            margin: .1em;
+        }
+        .heading{
+            background-color: rgba(197, 192, 192, 0.815);
+            padding:.5em 1em;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: sans-serif;
+        }
+        .content{
+            display: none;
+        }
+        .hide{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="panels">
+                <div class="panel">
+                    <h2 class="heading">open window 1</h2>
+                    <div class="content">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores odio sed pariatur laboriosam nobis accusamus! Quisquam amet consequatur harum at quas facere rem repudiandae tempora eveniet illo nobis, officiis dolore!</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h2 class="heading">open window 2</h2>
+                    <div class="content">
+                        <p>Dolor at, et illo perferendis commodi repellendus? Tempora dicta facere saepe commodi quod. Eius cum harum aliquam delectus beatae consequatur impedit nihil atque animi. Delectus, dignissimos. Nam error explicabo sapiente?</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h2 class="heading">open window 3 </h2>
+                    <div class="content">
+                        <p>Ipsum accusantium velit modi. Aperiam, illo fugit vero temporibus voluptatibus perspiciatis exercitationem voluptas tempore aliquid laboriosam ut modi magni sequi veniam necessitatibus doloribus explicabo neque? Amet quis adipisci soluta recusandae!</p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h2 class="heading">open window 4</h2>
+                   
+                    <div class="content">
+                        <p>Quibusdam, dignissimos omnis. Vel repellendus enim eveniet, voluptate laudantium, qui quis ab ex minima sequi accusantium laborum molestiae iusto numquam necessitatibus minus dolor? Est maxime porro esse facilis mollitia explicabo!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const panels = document.querySelectorAll('.heading');
+        
+        for(let i=0; i<panels.length;i++){
+            panels[i].addEventListener('click', function(){
+                // console.log(this.nextElementSibling);
+                // if(this.nextElementSibling.style.display === 'none'){
+                //     this.nextElementSibling.style.display='block';
+                // }else{
+                //     this.nextElementSibling.style.display = 'none';
+                // }
+                // if(this.)
+                // this.ne.classList.toggle('hide');
+                this.nextElementSibling.classList.toggle("hide");
+            });
+            // console.log(panels[i]);
+        }
+
+    </script>
+</body>
+</html>
