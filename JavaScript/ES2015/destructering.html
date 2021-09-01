@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructering object</title>
+    <script src=".\destructering.js"></script>
+</head>
+<body>
+    <main>
+        <spann><strong>Question 1 ES2015 lab guide</strong></spann>
+        <pre>const iphone11={
+        name:'iphone11',
+        manufacturer:'Apple',
+        price:699,
+        specs:{
+        color:'white',
+        memory:{
+        value:128,
+        unit:'MB'
+        },
+        cameras:{
+        front:'12 MP Wide',
+        rear:'12 MP Ultra Wide'
+        },
+        availableColors:['Black', 'red','white', 'green']
+        
+        },
+        CalculateDiscountedPrice: function(percentage){
+        return this.price*(100-percentage)/100;
+        }
+        }</pre>
+        <br>
+        <span><strong>Output</strong></span>
+        <pre>const {name,
+        manufacturer: brand,
+        specs:{
+        memory:{
+        value:ram
+        },
+        cameras:{
+        rear:rearCamera
+        },
+        availableColors:secondColor
+        },...optional } = iphone11;</pre>
+        <span><strong>Answer: </strong> </span>
+        <span id="answer"></span>
+    </main>
+    <script>
+         let res = document.getElementById("answer");
+         res.innerText=[name, brand, ram, rearCamera, secondColor[3]];
+         alert([name, brand, ram, rearCamera, secondColor[3]]);
+    </script>
+</body>
+</html>
