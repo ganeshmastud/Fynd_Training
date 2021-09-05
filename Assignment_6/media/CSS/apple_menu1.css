@@ -16,6 +16,67 @@ body {
 .menu {
   display: none;
 }
+
+li:nth-of-type(1) {
+  padding-left: 0%;
+}
+.menu-scroll {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  top: 0;
+  font-size: 2rem;
+  color: white;
+
+  background-color: black;
+}
+
+.fa-apple {
+  width: 3%;
+  padding-left: 47%;
+  margin: 0 auto;
+}
+.fa-apple,
+.fa-briefcase {
+  color: white;
+  opacity: 0.6;
+}
+.fa-briefcase {
+  float: right;
+
+  margin-right: 1em;
+}
+.fa-apple:hover,
+.fa-briefcase:hover {
+  opacity: 0.9;
+}
+.menu-links li a:hover {
+  opacity: 0.9;
+}
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-left: 0;
+  color: rgb(197, 192, 192);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
+
+  cursor: pointer;
+}
+.hamburger:hover {
+  opacity: 0.6;
+}
+
+#nav-toggle {
+  display: none;
+}
+#nav-toggle:checked ~ .menu {
+  display: flex;
+}
 .menu-links {
   width: 100%;
   display: flex;
@@ -49,63 +110,8 @@ body {
   font-weight: 100;
   color: white;
   border-bottom: 1px solid rgb(92, 91, 91);
-  opacity: 0.6;
-  font-family: Arial, Helvetica, sans-serif;
-}
-li:nth-of-type(1) {
-  text-align: center;
-}
-.menu-scroll {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  top: 0;
-  font-size: 2rem;
-  color: white;
 
-  background-color: black;
-}
-.fa-apple {
-  padding: 1% 45%;
-}
-.fa-apple,
-.fa-briefcase {
-  color: white;
-  opacity: 0.6;
-}
-.fa-apple:hover,
-.fa-briefcase:hover {
-  opacity: 0.9;
-}
-.menu-links li a:hover {
-  opacity: 0.9;
-}
-.hamburger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 0;
-  margin-left: 0;
-  color: rgb(122, 120, 120);
-  font-size: 2rem;
-  padding: 0.5rem;
   font-family: Arial, Helvetica, sans-serif;
-  z-index: 2;
-  opacity: 0.6;
-  cursor: pointer;
-}
-.hamburger:hover {
-  opacity: 0.9;
-  color: rgb(134, 134, 134);
-}
-.hamburger:active {
-  background-color: transparent;
-}
-#nav-toggle {
-  display: none;
-}
-#nav-toggle:checked ~ .menu {
-  display: flex;
 }
 
 .buy-iphone {
@@ -122,7 +128,7 @@ li:nth-of-type(1) {
   padding-top: 1%;
   color: black;
 }
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 800px) {
   .menu,
   .nav-bar {
     display: flex;
@@ -138,6 +144,7 @@ li:nth-of-type(1) {
   .menu-links li a {
     font-size: 1.3rem;
     border-bottom: none;
+    opacity: 0.6;
   }
   .menu-links li:nth-of-type(1) {
     text-align: left;

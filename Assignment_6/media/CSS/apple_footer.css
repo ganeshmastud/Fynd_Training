@@ -1,53 +1,93 @@
 body {
   margin: 0px;
   padding: 0px;
+  background-color: rgb(224, 222, 222);
 }
 * {
   box-sizing: border-box;
 }
 .footer-container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
 }
 .content {
-  max-width: 1080px;
+  width: 90%;
   margin: 0 auto;
-  display: flex;
-  /* flex-direction: row;
-  flex-wrap: wrap; */
-  justify-content: space-between;
 }
+
 .footer-columns {
-  flex-direction: column;
-  width: 17%;
-  margin: 0 auto;
+  flex-flow: row wrap;
+  flex-basis: 100%;
 }
 .footer-col {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
   font-family: "Source Sans Pro", sans-serif;
+  border-bottom: 0.5px solid rgb(156, 156, 156);
 }
-.footer-col ul {
-  display: inline-block;
-}
-.footer-col ul li {
-  display: inline-block;
-}
+
 .footer-col h4 {
-  display: inline-block;
-  margin: 0 auto;
-  padding: 0.5rem 1em;
-  font-size: 0.8rem;
-  /* font-family: "Source Sans Pro", sans-serif; */
-  font-weight: 600;
+  margin: 0.5em 0em;
+  font-size: 0.6rem;
+  font-weight: 400;
+  flex-basis: 100%;
+  color: rgb(70, 65, 65);
+}
+
+.col-links {
+  margin-top: 0;
+  padding-left: 0;
+  display: none;
+}
+.hide {
+  display: block;
 }
 .link {
-  display: inline-block;
+  /* display: inline-block; */
+  list-style-type: none;
+  margin: 0.4em 0;
   padding-left: 0;
 }
+.links {
+  font-size: 0.5rem;
+  font-weight: 500;
+  padding-left: 0;
+  margin: 0;
+  color: grey;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+
+@media screen and (min-width: 700px) {
+  .footer-container {
+    width: 90%;
+  }
+  .footer-col {
+    flex: 1 1 17%;
+    border-bottom: none;
+  }
+  .col-links {
+    display: block;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-col h4 {
+    margin: 0 auto;
+
+    font-weight: 400;
+  }
+  .content {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .links {
+    padding: 0em 0em;
+    font-size: 0.6rem;
+  }
+}
+
 /* .col-links {
   margin-top: 0;
   padding: 0 auto;
@@ -61,18 +101,9 @@ body {
   font-weight: 500;
 } */
 
-.col-links {
-  margin-top: 0;
-  padding: 0 auto;
-  padding-left: 0;
+/* .footer-col ul {
+  display: inline-block;
 }
-.link {
-  margin: 0.4em 0;
-}
-.links {
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding-left: 0;
-  margin: 0 auto;
-  padding: 0.5rem 1em;
-}
+.footer-col ul li {
+  display: inline-block;
+} */

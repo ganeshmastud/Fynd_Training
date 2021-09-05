@@ -181,5 +181,24 @@
             
         </div>
     </footer>
+    <script>
+        const panels = document.querySelectorAll('.col-heading');
+
+        for (let i = 0; i < panels.length; i++) {
+            panels[i].addEventListener('click', function () {
+                // console.log(this.nextElementSibling);
+                // if(this.nextElementSibling.style.display === 'none'){
+                //     this.nextElementSibling.style.display='block';
+                // }else{
+                //     this.nextElementSibling.style.display = 'none';
+                // }
+                // if(this.)
+                // this.ne.classList.toggle('hide');
+                this.nextElementSibling.classList.toggle("hide");
+            });
+            // console.log(panels[i]);
+        }
+
+    </script>
 </body>
 </html>
