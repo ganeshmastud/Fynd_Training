@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+    </div>
+    </div>
+    <script type="module">
+        new Vue({
+            el: '#app',
+            template: `
+            <div>
+            <h3>{{phones[0].name}}</h3>
+            <span>{{phones[0].price}}</span>
+            <ul>
+                <li v-for = 'color in phones[0].colors' v-bind:key="phones.name">
+                    {{color}}
+                </li>
+            </ul>
+            </div>
+            
+
+            `
+
+            ,
+            data: {
+               
+                phones: [
+                    {  name: 'Apple iPhone 12', price:900, colors:['Space Grey','White','Red']},
+                    
+                ]
+            }
+            
+        });
+    </script>
+</body>
+
+</html>

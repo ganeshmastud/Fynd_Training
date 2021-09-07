@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        
+    </div>
+    </div>
+    <script type="module">
+        new Vue({
+            el: '#app',
+            template:`
+            <div>
+            <select @change="setSelectedPerson">
+                <option v-for="person in persons" :value="person.nickname" >{{person.name}}</option>
+            </select>
+            <p>You selected {{ selectedPerson }}</p>
+            <button v-on:click="deletePerson">Delete person</button>
+            <ul>
+                <li v-for = 'person in persons' v-bind:key="person.id">
+                    {{person.name}}, {{person.age}}
+                </li>
+            </ul>
+            </div>
+            
+
+            `
+
+            ,
+            data: {
+                selectedPerson:'john',
+                delete_obj_id:1,
+               persons:[
+                   {id:1, name:'john',age: 32, nickname:'joohn' },
+                   { id: 2, name: 'jane', age: 30, nickname: 'jane' },
+                   { id: 3, name: 'johny', age: 22, nickname: 'johnyy' },
+               ]
+            },
+            methods: {
+                setSelectedPerson(event){
+                    this.selectedPerson = event.target.value;
+                    this.delete_obj_id = event.target.options.selectedIndex;
+                },
+                deletePerson(){
+                    if(this.delete_obj_id === 0){
+                        console.log("please select obj");
+                    } 
+                    else{
+                        
+                      const deletefn = (person) => {
+
+                            if (this.delete_obj_id === person.id) {
+                                console.log(this.person);
+                            }
+
+                     }
+                        this.persons.forEach(deletefn);
+                        console.log(" id ", this.delete_obj_id);
+                    }             
+                             
+                   
+                },
+                 
+            }
+        });
+    </script>
+</body>
+
+</html>

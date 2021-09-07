@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="module">
+            const rootInstance = new Vue({
+                    template: `
+        <form action="./login.html" class="login-form">
+            <div class="form-control">
+                <label for="username">username</label>
+                <input type="text" id="username" v-model="crediantials.username" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-control">
+                <label for="password">password</label>
+                <input type="password" id="password" v-model="crediantials.password" required>
+                <span class="error"></span>
+            </div>
+            <div class="form-control">
+                <button value="submit">Submit</button>
+            </div>
+            <p>{{crediantials.username}}</p>
+        </form>
+        
+        `,
+        data:{
+            crediantials:{
+                username:'',
+                password:''
+            }
+        }
+                });
+                rootInstance.$mount('#root');
+    </script>
+
+    
+</body>
+</html>

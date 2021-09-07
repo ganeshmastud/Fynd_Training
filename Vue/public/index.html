@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <style>
+        .panel{
+            margin-top:3em;
+            border: 1px solid grey;
+        }
+        .panel-heading{
+            background-color: rgb(165, 161, 161);
+            
+            display:block;
+            padding: 1rem;
+        }
+        .content{
+            display:block;
+            padding: 1em 1em;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="root">
+
+    </div>
+    
+    
+    <script type="module"></script>
+        // import Vue from '.\vue.esm.browser.js';
+            const rootInstance = new Vue({
+                // el:'#app',
+
+               template:  `<div id = "app" >
+                                <div title="message">
+                                    Hello {{ framework }}
+                                    <button v-on:click="changeFramework">Update Vue js</button>
+                                </div>
+                               <div class="panel">
+                                    <span v-on:click="toggle" class="panel-heading">click to open</span>
+                                    <span class="content" v-show="isVisible" >Hello World</span>
+                                </div>
+
+
+                                <template v-if="city === 'Mumbai' ">
+                                    <p>Gateway of India</p>
+                                    <p> CSMT</p>    
+                                </template>
+                                <template v-else-if="city === 'Bangalore' ">
+                                    <p> Vidhan Soudha </p>    
+                                    <p> Cubbon Park</p>
+                                </template>
+                                <template v-else-if=" city=== 'Delhi' ">
+                                    <p>India Gate</p>
+                                    <p>Qutab Minar</p>
+                                </template>
+                                <template v-else>
+                                    <p>Not sure of the landmark in the city</p>    
+                                </template>
+
+                                <button @click="city = 'Mumbai' "> Check Mumbai</button>
+                                <button @click="city = 'Bangalore' ">Check Bangalore</button>
+                                <button @click="city = 'Delhi' "> Check Delhi</button>
+                                <button @click="city = 'Kolkata' ">check Kolkata</button>
+                            </div>
+                           
+                                  
+                          
+                            
+                `,
+                data:{
+                    framework:'Vue Js',
+                    isVisible:true,
+                    city:'Mumbai'
+                },
+                methods:{
+                    changeFramework(){
+                        this.framework = 'Vue JS v2.6';
+                    },
+                    toggle(){
+                        this.isVisible= !this.isVisible;
+                    }
+                }
+
+            });
+            rootInstance.$mount('#root');
+    </script>
+    
+</body>
+</html>

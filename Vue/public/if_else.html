@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <template v-if="city === 'Mumbai' ">
+            <p>Gateway of India</p>
+            <p> CSMT</p>
+        </template>
+        <template v-else-if="city === 'Bangalore' ">
+            <p> Vidhan Soudha </p>
+            <p> Cubbon Park</p>
+        </template>
+        <template v-else-if=" city=== 'Delhi' ">
+            <p>India Gate</p>
+            <p>Qutab Minar</p>
+        </template>
+        <template v-else>
+            <p>Not sure of the landmark in the city</p>
+        </template>
+        
+        <button @click="city = 'Mumbai' "> Check Mumbai</button>
+        <button @click="city = 'Bangalore' ">Check Bangalore</button>
+        <button @click="city = 'Delhi' "> Check Delhi</button>
+        <button @click="city = 'Kolkata' ">check Kolkata</button>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                city: 'Mumbai'
+            },
+        });
+    </script>
+</body>
+</html>
