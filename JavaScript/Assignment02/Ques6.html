@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Check the console for output</p>
+    <p>
+        <pre>A deep copy means that all of the values of the new variable are copied and 
+disconnected from the original variable. A shallow copy means that certain 
+(sub-)values are still connected to the original variable.</pre>
+
+    </p>
+    
+    <script>
+        const iPhone11 = {
+            name: 'iPhone 11',
+            manufacturer: 'Apple',
+            price: 699,
+            specs: {
+                color: 'White',
+                memory: {
+                    value: 128,
+                    unit: 'MB'
+                },
+                cameras: {
+                    front: '12 MP Wide',
+                    rear: '12 MP Ultra Wide'
+                },
+                availableColors: ['Black', 'Green', 'Yellow', 'Purple', 'Red', 'White']
+            }
+        }
+
+        const iPhone11ObjCopy = { ...iPhone11 };
+        console.log('Copy of Object');
+        console.log(iPhone11ObjCopy);
+        const iPhone11DeepCopy = {
+            ...iPhone11,
+            specs: {
+                ...iPhone11.specs,
+                memory: {
+                    ...iPhone11.specs.memory
+                },
+                cameras: {
+                    ...iPhone11.specs.cameras
+                },
+                availableColors: [
+                    ...iPhone11.specs.availableColors
+                ]
+            }
+        }
+
+
+        console.log('DeepCopy of Object');
+        console.log(iPhone11DeepCopy);
+
+        if (JSON.stringify(iPhone11ObjCopy) === JSON.stringify(iPhone11DeepCopy)) {
+            console.log('match');
+        }
+
+        iPhone11ObjCopy.name = 'Samsung';
+        console.log('iPhone11 Original');
+        console.log(iPhone11.name);
+        console.log('iPhone11 Copy');
+        console.log(iPhone11ObjCopy.name);
+        console.log('iPhone11 DeepCopy');
+        console.log(iPhone11DeepCopy.name);
+
+        iPhone11ObjCopy.specs.availableColors.push('Pink');
+        console.log('iPhone11 Original');
+        console.log(iPhone11.specs.availableColors);
+        console.log('iPhone11 Copy');
+        console.log(iPhone11ObjCopy.specs.availableColors);
+        console.log('iPhone11 DeepCopy');
+        console.log(iPhone11DeepCopy.specs.availableColors);
+
+
+        iPhone11DeepCopy.name = 'OnePlus';
+        console.log('iPhone11 Original');
+        console.log(iPhone11.name);
+        console.log('iPhone11 Copy');
+        console.log(iPhone11ObjCopy.name);
+        console.log('iPhone11 DeepCopy');
+        console.log(iPhone11DeepCopy.name);
+
+        iPhone11DeepCopy.specs.color = 'lightblue';
+        console.log('iPhone11 Original');
+        console.log(iPhone11.specs.color);
+        console.log('iPhone11 Copy');
+        console.log(iPhone11ObjCopy.specs.color);
+        console.log('iPhone11 DeepCopy');
+        console.log(iPhone11DeepCopy.specs.color);
+
+
+       
+
+
+        
+
+    </script>
+</body>
+</html>

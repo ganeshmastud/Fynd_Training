@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h4{
+            padding-left: 6.5em;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <pre>
+            <h4>When you should not use Arrow Functions</h4>
+           
+            After learning a little more about arrow functions, I hope you understand that they do not replace regular functions.
+            
+            Here are some instances where you probably wouldn’t want to use them:
+            
+            1.Object methods
+                When you call cat.jumps, the number of lives does not decrease. It is because this is not bound to anything, and will
+                inherit the value of this from its parent scope.
+                
+                var cat = {
+                lives: 9,
+                jumps: () => {
+                this.lives--;
+                }
+                }
+            2. Callback functions with dynamic context
+            
+                If you need your context to be dynamic, arrow functions are not the right choice. Take a look at this event handler
+                below:
+                
+                var button = document.getElementById('press');
+                button.addEventListener('click', () => {
+                this.classList.toggle('on');
+                });
+                If we click the button, we would get a TypeError. It is because this is not bound to the button, but instead bound to
+                its parent scope.
+            
+            3. When it makes your code less readable
+            
+                It is worth taking into consideration the variety of syntax we covered earlier. With regular functions, people know what
+                to expect. With arrow functions, it may be hard to decipher what you are looking at straightaway.
+            <h4>When you should use them</h4>
+        
+            Arrow functions shine best with anything that requires this to be bound to the context, and not the function itself. 
+            Despite the fact that they are anonymous, I also like using them with methods such as map and reduce, because I think it
+            makes my code more readable. To me, the pros outweigh the cons.
+        </pre>
+    </p>
+    
+    <script>
+        const addValues = (x, y) => {
+                return x + y
+            }
+        console.log(addValues(6,7));
+        let age=0;
+        const incrage = () =>{
+            return this.age++;
+        }
+        console.log(age, incrage);
+         console.log(age, incrage);
+        
+    </script>
+</body>
+</html>

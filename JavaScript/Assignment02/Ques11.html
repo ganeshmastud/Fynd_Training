@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Check the console for output</p>
+    <script>
+        class Project {
+            constructor(id, name, client) {
+                this.id = id;
+                this.name = name;
+                this.client = client
+            }
+        }
+        const dbsPayroll = new Project(1001, 'DBS payroll', 'DBS');
+        const intranetDeployment = new Project(2001, 'Intranet v2 deployment', 'Internal');
+        console.log(dbsPayroll);
+        console.log(intranetDeployment);
+    </script>
+</body>
+</html>
