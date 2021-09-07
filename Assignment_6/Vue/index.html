@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div title="message">
+            Hello {{ framework }}
+            <button v-on:click="changeFramework">Update Vue js</button>
+        </div>
+    </div>
+
+    <script type="module">
+        // import Vue from '.\vue.esm.browser.js';
+            new Vue({
+                el:'#app',
+                data:{
+                    framework:'Vue Js'
+                },
+                methods:{
+                    changeFramework(){
+                        this.framework = 'Vue JS v2.6';
+                    }
+                }
+
+            });
+    </script>
+    
+</body>
+</html>
