@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:  flex;
+            justify-content: space-between;
+            flex-flow: row wrap;
+
+        }
+        .left{
+            flex:0 0 60%;
+        }
+        .left ul li{
+            flex:1 0 10%;
+        }
+        li{
+            
+            list-style-type: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <ul>
+                <li>1 page</li>
+                <li>2 page</li>
+                <li>3 page</li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <li>4 page</li>
+                <li>5 page</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
