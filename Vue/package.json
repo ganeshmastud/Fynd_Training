@@ -1,0 +1,22 @@
+{
+  "name": "vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cpx": "^1.5.0",
+    "live": "^0.1.25-beta.0",
+    "live-server": "^1.2.1",
+    "modules": "^0.4.0",
+    "node": "^16.6.1",
+    "server": "^1.0.35"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server public/"
+
+  },
+  "author": "",
+  "license": "ISC"
+}

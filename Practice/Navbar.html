@@ -14,15 +14,40 @@
         }
         .left{
             flex:0 0 60%;
+            padding-left:5% ;
         }
-        .left ul li{
-            flex:1 0 10%;
+        .right{
+            flex:0 0 20%;
+            padding-right:5%;
         }
-        li{
-            
+        ul{
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            flex-flow: row wrap;
+        
+        }
+         li{
             list-style-type: none;
             display: inline-block;
         }
+        .left ul li{
+            flex:0 1 10%;
+        }
+        .right ul{
+            justify-content: flex-end;
+        }
+       .right ul li{
+            flex:0 1 30%;
+            text-align: right;
+        }
+        .contr-2{
+            width:300px;
+            height:300px;
+            padding-top: 300px;
+            
+        }
+        
     </style>
 </head>
 <body>
@@ -40,6 +65,9 @@
                 <li>5 page</li>
             </ul>
         </div>
+    </div>
+    <div class="contr-2">
+
     </div>
     
 </body>
